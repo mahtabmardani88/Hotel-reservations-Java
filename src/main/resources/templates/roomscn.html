@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title> Magestic Hotel</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.scrollUp.js"></script>
+    <script type="text/javascript" src="dist/demo.js"></script>
+
+</head>
+<style>
+
+    select {
+        padding: 5px;
+        font-size: 16px;
+        background-color: black;
+        color: white;
+    }
+
+    .flag-icon {
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+    .tm-header {
+            background-image: url("/images/photo6.jpg");
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+</style>
+
+
+<body>
+<!--<select name="language" id="language">
+    <option value="en">English <span class="flag-icon">🇺🇸</span></option>
+    <option value="ja">中文 <span class="flag-icon">🇨🇳</span></option>
+
+</select>-->
+
+
+
+<header class="tm-header">
+    </div>
+    <div class="flags">
+        <div class="flagEn">
+            <a href="#" id="enImg"><img src="/images/us.png"/></a>
+        </div>
+        <div class="flagCn">
+            <a href="#" id="cnImg"><img src="/images/cn.png"/></a>
+        </div>
+    </div>
+    </nav>
+    <img class="tm-logo" src="/images/hotellogo.png" alt="Majestic Hotel">
+    <nav class="tm-nav">
+        <div>
+            <ul>
+                <li class="tm-list"><a href="home" th:href="@{/home}">指数</a></li>
+                <li class="tm-list"><a href="rooms" th:href="@{/rooms}">房间</a></li>
+                <li class="tm-list"><a href="booking" th:href="@{/reservation}">预订</a></li>
+                <li class="tm-list"><a href="Login" th:href="@{/login}">登录</a></li>
+                <li class="tm-list"><a href="restaurant" th:href="@{/restaurant}">餐厅</a></li>
+                <li class="tm-list"><a href="contact" th:href="@{/contact}">接触</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<section class="tm-main">
+</section>
+
+<br>
+<section class="tm-roomsection">
+    <div class="tm-room1">
+        <div class="tm-trans"> <div><p>3 x 双人床, 4 x 单人床, 2 x 婴儿床</p><p>厨房 桑拿 土地 游泳池</p><p>抽烟</p> </div>
+
+            <div><p>仅适用于</p><p class="bold">3000 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/luxury.png">
+        <p class="s">仅适用于</p>
+
+    </div>
+    <div class="tm-room1">
+        <div class="tm-trans"> <div><p>2 x 双人床, 4 x 单人床, 2 x 婴儿床</p><p>厨房 桑拿 游泳池</p><p>抽烟</p> </div>
+
+            <div><p>仅适用于</p><p class="bold">800 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/delux.png">
+        <p>阁楼</p>
+
+    </div>
+    <div class="tm-room1">
+
+        <div class="tm-trans"> <div><p>2 x 双人床, 1 单人床, 1 婴儿床</p><p>咖啡机</p><p>禁止吸烟</p> </div>
+
+            <div><p>仅适用于</p><p class="bold">550 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/premier.png">
+        <p>双人间</p>
+
+    </div>
+</section>
+<br/>
+<section class="tm-roomsection">
+    <div class="tm-room1">
+
+        <div class="tm-trans"> <div><p>双人床</p><p></p><p>咖啡机, 浴缸</p><p>禁止吸烟</p> </div>
+
+            <div><p>仅适用于</p><p class="bold">380 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/luxuryroom.png">
+        <p class="s">双人间</p>
+
+    </div>
+    <div class="tm-room1">
+
+        <div class="tm-trans"><div><p>单人床 </p><p></p><p>咖啡机</p><p>残疾人房间</p></div>
+
+            <div><p>仅适用于</p><p class="bold">240 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/deluxroom.png">
+        <p class="s">单人房</p>
+
+    </div>
+    <div class="tm-room1">
+
+        <div class="tm-trans"><div><p>单人床</p><p><p>禁止吸烟</p> </div>
+
+            <div><p>仅适用于</p><p class="bold">200 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/premiumroom.png">
+        <p>单人房</p>
+
+    </div>
+</section>
+<br/>
+
+
+
+<section class="tm-makeres">
+    <div class="tm-res">
+        <div class="tm-resbutton">
+            <a href="roomservices" th:href="@{/roomservices}"> <p>客房服务</p></a>
+
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="tm-footer">
+    <div class="tm-us">
+        <p class="bold">关于我们</p>
+        <p>该连锁酒店成立于 1982 年，其愿景是打造提供卓越服务的世界级酒店
+            服务和豪华住宿。经过几十年的成功，连锁店已扩展到全国各地
+            世界，包括中国。该连锁店的最新成员是在美丽的吴兴兴建的酒店
+            中国浙江省湖州市。创始人王女士热衷于打造一家酒店
+            将中国传统元素与现代设施融为一体。
+
+        </p>
+    </div>
+
+    <div class="tm-address">
+        <p class="bold">地址</p>
+        <p>Reykjavikplein 1, 3543 KA Utrecht<br>
+            电话: 030 203 0500<br>
+            电子邮件: capgemini@info.com</p>
+    </div>
+
+    <br/>
+
+    <div class="tm-media">
+        <a href="https://www.instagram.com/accounts/login/"><img src="/images/igfoto.png" width="10%" height="10%"></a>
+        <a href="https://support.google.com/answer/2451065?hl=en"><img src="/images/G.png" width="100%" height="100%"></a>
+        <a href="https://web.wechat.com/uklccp?lang=en_US&t=v2/index"><img src="/images/wechat1.jpg" width="12%" height="12%"></a>
+    </div>
+    <!--        <a href="#">  <img class="tm-up" src="images/up.png"> </a>-->
+</footer>
+
+<script>
+  document.getElementById("enImg").addEventListener("click", function() {
+    window.location.href = "rooms";
+  });
+</script>
+
+</body>
+
+</html>

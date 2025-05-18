@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+
+    <nav th:fragment="menu">
+        <div class="row">
+            <div class="w-50 mx-auto">
+                <a th:href="@{/}"></a>
+                <a th:href="@{/room}"></a>
+                <a th:href="@{/reservation}"></a>
+                <a th:href="@{/guest}"></a>
+                <a th:href="@{/discount}"></a>
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>

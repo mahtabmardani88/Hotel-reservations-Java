@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Magestic Hotel</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="dist/pickmeup.min.js"></script>-->
+    <!--<script type="text/javascript" src="dist/handleCounter.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/pickmeup.css">
+    <link rel="stylesheet" type="text/css" href="css/handle-counter.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="dist/jquery.scrollUp.js"></script>
+    <script type="text/javascript" src="dist/demo.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+</head>
+<style>
+select {
+    padding: 5px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+}
+
+.flag-icon {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.tm-header {
+    background-image: url("/images/restaurantpage.jpg");
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.success-message {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+</style>
+
+<body>
+<!--<select name="language" id="language">
+    <option value="en">English <span class="flag-icon">🇺🇸</span></option>
+    <option value="ja">中文 <span class="flag-icon">🇨🇳</span></option>
+</select>
+-->
+
+<header class="tm-header">
+    </div>
+    <div class="flags">
+        <div class="flagEn">
+            <a href="#" id="enImg"><img src="/images/us.png"/></a>
+        </div>
+        <div class="flagCn">
+            <a href="#" id="cnImg"><img src="/images/cn.png"/></a>
+        </div>
+    </div>
+    </nav>
+    <img class="tm-logo" src="/images/hotellogo.png" alt="Majestic Hotel">
+    <nav class="tm-nav">
+        <div>
+            <ul>
+                <li class="tm-list"><a href="home" th:href="@{/home}">指数</a></li>
+                <li class="tm-list"><a href="rooms" th:href="@{/rooms}">房间</a></li>
+                <li class="tm-list"><a href="booking" th:href="@{/reservation}">预订</a></li>
+                <li class="tm-list"><a href="Login" th:href="@{/login}">登录</a></li>
+                <li class="tm-list"><a href="restaurant" th:href="@{/restaurant}">餐厅</a></li>
+                <li class="tm-list"><a href="contact" th:href="@{/contact}">接触</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section class="tm-main"></section>
+
+<section class="tm-booking">
+    <form id="contactForm">
+        <div class="tm-form1">
+            <input type="text" name="name" id="name" placeholder="姓名">
+            <input type="email" name="email" id="email" placeholder="电子邮件">
+            <textarea id="messageInput" placeholder="您的留言..." rows="4"></textarea>
+            <div id="charCount">0/500</div>
+            <div class="success-message">您的留言已收到!</div>
+            <input type="submit" id="sub2" value="发送">
+        </div>
+    </form>
+
+    <div class="vertical-line"></div>
+
+    <div class="tm-form2">
+        <div class="tm-cl">
+            <img id="place" src="/images/placeholder.png">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9803.56303044615!2d5.064897!3d52.0999197!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66f944003844f%3A0xff2c0de8bdd4e64a!2sCapgemini%20Nederland!5e0!3m2!1str!2sus!4v1683015712334!5m2!1str!2sus"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="tm-footer">
+    <div class="tm-us">
+        <p class="bold">关于我们</p>
+        <p>该连锁酒店成立于 1982 年，其愿景是打造提供卓越服务的世界级酒店
+            服务和豪华住宿。经过几十年的成功，连锁店已扩展到全国各地
+            世界，包括中国。该连锁店的最新成员是在美丽的吴兴兴建的酒店
+            中国浙江省湖州市。创始人王女士热衷于打造一家酒店
+            将中国传统元素与现代设施融为一体。
+
+        </p>
+    </div>
+
+    <div class="tm-address">
+        <p class="bold">地址</p>
+        <p>Reykjavikplein 1, 3543 KA Utrecht<br>
+            电话: 030 203 0500<br>
+            电子邮件: capgemini@info.com</p>
+    </div>
+
+    <br/>
+    <div class="tm-media">
+        <a href="https://www.instagram.com/accounts/login/"><img src="/images/igfoto.png" width="10%" height="10%"></a>
+        <a href="https://support.google.com/answer/2451065?hl=en"><img src="/images/G.png" width="100%" height="100%"></a>
+        <a href="https://web.wechat.com/uklccp?lang=en_US&t=v2/index"><img src="/images/wechat1.jpg" width="12%" height="12%"></a>
+    </div>
+</footer>
+
+
+<script>
+    $(document).ready(function () {
+        var maxChars = 500;
+        var messageInput = $("#messageInput");
+        var charCount = $("#charCount");
+        var successMessage = $(".success-message");
+
+        messageInput.on("input", function () {
+            var message = $(this).val();
+            var remainingChars = maxChars - message.length;
+
+            if (remainingChars < 0) {
+                messageInput.val(message.slice(0, maxChars));
+                remainingChars = 0;
+            }
+
+            charCount.text(remainingChars + "/" + maxChars);
+        });
+
+        $("#contactForm").submit(function (e) {
+            e.preventDefault();
+
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var message = $("#messageInput").val();
+
+            // İletişim formu verilerini kontrol et
+            if (name && email && message) {
+                successMessage.show();
+                $("#sub2").prop("disabled", true);
+                $("#charCount").hide();
+
+                // Formu temizle
+                $("#contactForm")[0].reset();
+                charCount.text(maxChars + "/" + maxChars);
+            } else {
+
+                alert("Please fill in all the fields and provide a valid email address.");
+            }
+        });
+
+
+        charCount.css("color", "black");
+    });
+</script>
+
+<script>
+  document.getElementById("EnImg").addEventListener("click", function() {
+    window.location.href = "contact";
+  });
+</script>
+</body>
+</html>

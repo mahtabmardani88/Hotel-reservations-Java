@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title> Magestic Hotel</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.scrollUp.js"></script>
+    <script type="text/javascript" src="dist/demo.js"></script>
+
+</head>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.tm-header {
+background-image: url("/images/photo4.jpg");
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+ .tm-header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 2;
+            color: #fff;
+        }
+
+
+.tm-logo {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  max-width: 200px;
+  z-index: 2;
+}
+
+
+.tm-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+}
+
+
+.flags {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.tm-nav {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  z-index: 2;
+}
+
+.tm-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.tm-nav li {
+  margin-right: 20px;
+}
+
+.tm-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .tm-heading {
+    font-size: 24px;
+  }
+}
+
+    </style>
+
+
+
+
+<body>
+<!--<select name="language" id="language">
+    <option value="en">English <span class="flag-icon">🇺🇸</span></option>
+    <option value="ja">中文 <span class="flag-icon">🇨🇳</span></option>
+
+</select>-->
+
+
+
+<header class="tm-header">
+    </div>
+    <div class="flags">
+        <div class="flagEn">
+            <a href="#" id="enImg"><img src="/images/us.png"/></a>
+        </div>
+        <div class="flagCn">
+            <a href="#" id="cnImg"><img src="/images/cn.png"/></a>
+        </div>
+    </div>
+    </nav>
+    <img class="tm-logo" src="/images/hotellogo.png" alt="Majestic Hotel">
+    <nav class="tm-nav">
+        <div>
+            <ul>
+                <li class="tm-list"><a href="home" th:href="@{/home}">Home</a></li>
+                <li class="tm-list"><a href="rooms" th:href="@{/rooms}">Rooms</a></li>
+                <li class="tm-list"><a href="booking" th:href="@{/reservation}">Booking</a></li>
+                <li class="tm-list"><a href="Login" th:href="@{/login}">Login</a></li>
+                <li class="tm-list"><a href="restaurant" th:href="@{/restaurant}">Restaurant</a></li>
+                <li class="tm-list"><a href="contact" th:href="@{/contact}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<section class="tm-main">
+</section>
+
+<br>
+<section class="tm-roomsection">
+    <div class="tm-room1">
+        <div class="tm-trans"> <div><p>3 x Double bed, 4 single beds, 2 baby beds</p><p>Kitchen Sauna Teras Swimmingpool</p><p>Smoking</p> </div>
+
+            <div><p>Only for</p><p class="bold">3000 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/luxury.png">
+        <p class="s">Penthouse</p>
+
+    </div>
+    <div class="tm-room1">
+        <div class="tm-trans"> <div><p>2 x Double bed, 4 single beds, 2 baby beds</p><p>Kitchen Sauna Swimmingpool</p><p>Smoking</p> </div>
+
+            <div><p>Only for</p><p class="bold">800 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/delux.png">
+        <p>Penthouse</p>
+
+    </div>
+    <div class="tm-room1">
+
+        <div class="tm-trans"> <div><p>2 Double bed, 1 single bed, 1 baby bed</p><p>Coffee Machine </p><p>Non-smoking</p> </div>
+
+            <div><p>Only for</p><p class="bold">550 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/premier.png">
+        <p>Double Room</p>
+
+    </div>
+</section>
+<br/>
+<section class="tm-roomsection">
+    <div class="tm-room1">
+
+        <div class="tm-trans"> <div><p>Double bed </p><p></p><p>Coffee Machine,Bathtub</p><p>Non-smoking</p> </div>
+
+            <div><p>Only for</p><p class="bold">380 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/luxuryroom.png">
+        <p class="s">Double Room</p>
+
+    </div>
+    <div class="tm-room1">
+
+        <div class="tm-trans"><div><p>Single bed </p><p></p><p>Coffee Machine</p><p>Disabled room</p></div>
+
+            <div><p>Only for</p><p class="bold">240 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/deluxroom.png">
+        <p class="s">Single Room</p>
+
+    </div>
+    <div class="tm-room1">
+
+        <div class="tm-trans"><div><p>Single bed </p><p><p>Non Smoking</p> </div>
+
+            <div><p>Only for</p><p class="bold">200 Euro</p> </div></div>
+
+
+        <img class="tm-roomimage" src="/images/premiumroom.png">
+        <p>Single Room</p>
+
+    </div>
+</section>
+<br/>
+
+
+
+<section class="tm-makeres">
+    <div class="tm-res">
+        <div class="tm-resbutton">
+            <a href="roomservices" th:href="@{/roomservices}"> <p>Room Services</p></a>
+
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="tm-footer">
+    <div class="tm-us">
+        <p class="bold">About Us</p>
+        <p>About Us
+
+            The hotel chain was established in 1982, with a vision to create world-class hotels that offered exceptional
+            service and luxurious accommodations. After decades of success, the chain has expanded to various parts of
+            the world, including China. The latest addition to the chain is the hotel being built in the beautiful Wuxing
+            District of Huzhou, Zhejiang, China. The founder, Ms. Wang, had a passion for creating a hotel that
+            incorporates traditional Chinese elements with modern amenities.</p>
+    </div>
+
+    <div class="tm-address">
+        <p class="bold">Address</p>
+        <p>Reykjavikplein 1, 3543 KA Utrecht
+            Phone : 030 203 0500
+            Email : capgemini@info.com</p>
+    </div>
+    <br/>
+
+    <div class="tm-media">
+        <a href="https://www.instagram.com/accounts/login/"><img src="/images/igfoto.png" width="10%" height="10%"></a>
+        <a href="https://support.google.com/answer/2451065?hl=en"><img src="/images/G.png" width="100%" height="100%"></a>
+        <a href="https://web.wechat.com/uklccp?lang=en_US&t=v2/index"><img src="/images/wechat1.jpg" width="12%" height="12%"></a>
+    </div>
+    <!--        <a href="#">  <img class="tm-up" src="images/up.png"> </a>-->
+</footer>
+<script>
+  document.getElementById("cnImg").addEventListener("click", function() {
+    window.location.href = "roomscn";
+  });
+</script>
+
+
+</body>
+
+</html>

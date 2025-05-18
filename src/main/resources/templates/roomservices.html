@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title>Room Services - Magestic Hotel</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+    select {
+        padding: 5px;
+        font-size: 16px;
+        background-color: black;
+        color: white;
+    }
+
+    .flag-icon {
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tm-header {
+            background-image: url("/images/restaurantpage.jpg");
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tm-logo {
+            height: 40px;
+        }
+
+        .tm-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tm-nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .tm-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .tm-main {
+            padding: 20px;
+        }
+
+        .tm-main h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .tm-main p {
+            margin-bottom: 20px;
+        }
+
+        .tm-main ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .tm-footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .tm-us,
+        .tm-address,
+        .tm-media {
+            flex: 1;
+        }
+
+        .tm-address p {
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+<!--<select name="language" id="language">
+    <option value="en">English <span class="flag-icon">🇺🇸</span></option>
+    <option value="ja">中文 <span class="flag-icon">🇨🇳</span></option>
+
+</select>-->
+
+
+<header class="tm-header">
+    </div>
+    <div class="flags">
+        <div class="flagEn">
+            <a href="#" id="enImg"><img src="/images/us.png"/></a>
+        </div>
+        <div class="flagCn">
+            <a href="#" id="cnImg"><img src="/images/cn.png"/></a>
+        </div>
+    </div>
+    </nav>
+    <nav class="tm-nav">
+        <div>
+            <ul>
+                <li class="tm-list"><a href="home" th:href="@{/home}">Home</a></li>
+                <li class="tm-list"><a href="rooms" th:href="@{/rooms}">Rooms</a></li>
+                <li class="tm-list"><a href="booking" th:href="@{/reservation}">Booking</a></li>
+                <li class="tm-list"><a href="Login" th:href="@{/login}">Login</a></li>
+                <li class="tm-list"><a href="restaurant" th:href="@{/restaurant}">Restaurant</a></li>
+                <li class="tm-list"><a href="contact" th:href="@{/contact}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section class="tm-main">
+    <!--<h1>Room Services</h1>-->
+    <p>Here are the services we offer for our rooms:</p>
+
+    <ul>
+        <li>Room cleaning and tidying</li>
+        <li>Laundry service</li>
+        <li>24/7 room service</li>
+        <li>In-room dining</li>
+        <li>Concierge service</li>
+        <li>Wake-up calls</li>
+        <li>Maintenance and repairs</li>
+        <!-- Add more services as needed -->
+    </ul>
+
+    <p>Enter Your Room Number:</p>
+    <input type="text" id="roomNumber" placeholder="Room Number">
+
+    <button onclick="showFeedback()">Send</button>
+
+    <script>
+    function showFeedback() {
+      var roomNumber = document.getElementById("roomNumber").value;
+      var feedback = "Your request has been processed.\nRoom Number: " + roomNumber;
+      alert(feedback);
+    }
+  </script>
+</section>
+
+</body>
+</html>
+

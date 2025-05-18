@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Magestic Hotel</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/pickmeup.min.js"></script>
+    <script type="text/javascript" src="dist/handleCounter.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/pickmeup.css">
+    <link rel="stylesheet" type="text/css" href="css/handle-counter.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="dist/jquery.scrollUp.js"></script>
+    <script type="text/javascript" src="dist/demo.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+</head>
+<style>
+select {
+        padding: 5px;
+        font-size: 16px;
+        background-color: black;
+        color: white;
+    }
+
+
+    .tm-header {
+            background-image: url("/images/restaurantpage.jpg");
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+</style>
+
+
+<body>
+
+<header class="tm-header">
+    </div>
+    <div class="flags">
+        <div class="flagEn">
+            <a href="#" id="enImg"><img src="/images/us.png"/></a>
+        </div>
+        <div class="flagCn">
+            <a href="#" id="cnImg"><img src="/images/cn.png"/></a>
+        </div>
+    </div>
+    </nav>
+    <img class="tm-logo" src="/images/hotellogo.png" alt="Majestic Hotel">
+    <nav class="tm-nav">
+        <div>
+            <ul>
+                <li class="tm-list"><a href="home" th:href="@{/home}">指数</a></li>
+                <li class="tm-list"><a href="rooms" th:href="@{/rooms}">房间</a></li>
+                <li class="tm-list"><a href="booking" th:href="@{/reservation}">预订</a></li>
+                <li class="tm-list"><a href="Login" th:href="@{/login}">登录</a></li>
+                <li class="tm-list"><a href="restaurant" th:href="@{/restaurant}">餐厅</a></li>
+                <li class="tm-list"><a href="contact" th:href="@{/contact}">接触</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section class="tm-main">
+
+</section>
+<div class="container mt-5">
+    <h2 class="text-center">登录表单</h2>
+    <br>
+    <form action="/login" method="POST" style="max-width: 500px; margin: 0 auto;">
+        <div class="form-group">
+            <label for="username" style="font-size: 10px;"><strong></strong></label>
+            <input type="text" class="form-control" id="username" name="username" required placeholder="电子邮件" style="width: 100%; font-size: 16px; padding: 10px;">
+        </div>
+
+        <div class="form-group">
+            <label for="password" style="font-size: 10px;"><strong></strong></label>
+            <input type="password" class="form-control" id="password" name="password" required placeholder="密码" style="width: 100%; font-size: 16px; padding: 10px; margin-top: 10px;">
+        </div>
+        <br>
+        <div class="form-group">
+            <a href="/forgotpassword" style="font-size: 14px;">忘记密码了吗?</a>
+        </div>
+        <br>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary" style="font-size: 16px; padding: 10px 20px;">登入</button>
+        </div>
+        <br>
+        <div class="form-group text-center">
+            <p style="font-size: 14px;">没有帐户? <a href="/register">登记</a></p>
+        </div>
+    </form>
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<br>
+<footer class="tm-footer">
+    <div class="tm-us">
+        <p class="bold">关于我们</p>
+        <p>该连锁酒店成立于 1982 年，其愿景是打造提供卓越服务的世界级酒店
+            服务和豪华住宿。经过几十年的成功，连锁店已扩展到全国各地
+            世界，包括中国。该连锁店的最新成员是在美丽的吴兴兴建的酒店
+            中国浙江省湖州市。创始人王女士热衷于打造一家酒店
+            将中国传统元素与现代设施融为一体。
+
+        </p>
+    </div>
+
+    <div class="tm-address">
+        <p class="bold">地址</p>
+        <p>Reykjavikplein 1, 3543 KA Utrecht<br>
+            电话: 030 203 0500<br>
+            电子邮件: capgemini@info.com</p>
+    </div>
+
+    <br/>
+
+    <div class="tm-media">
+        <a href="https://www.instagram.com/accounts/login/"><img src="/images/igfoto.png" width="10%" height="10%"></a>
+        <a href="https://support.google.com/answer/2451065?hl=en"><img src="/images/G.png" width="100%" height="100%"></a>
+        <a href="https://web.wechat.com/uklccp?lang=en_US&t=v2/index"><img src="/images/wechat1.jpg" width="12%" height="12%"></a>
+    </div>
+</footer>
+
+<script>
+    $(document).ready(function () {
+        var maxChars = 500;
+        var messageInput = $("#messageInput");
+        var charCount = $("#charCount");
+
+        messageInput.on("input", function () {
+            var message = $(this).val();
+            var remainingChars = maxChars - message.length;
+
+            if (remainingChars < 0) {
+                messageInput.val(message.slice(0, maxChars));
+                remainingChars = 0;
+            }
+
+            charCount.text(remainingChars + "/" + maxChars);
+        });
+
+        $("#contactForm").submit(function (e) {
+            e.preventDefault();
+
+            $(".success-message").show();
+            $("#sub2").prop("disabled", true);
+            $("#charCount").hide();
+        });
+    });
+</script>
+<script>
+  document.getElementById("enImg").addEventListener("click", function() {
+    window.location.href = "login";
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+    <style>
+        /* Footer stilini buraya yazın */
+        .reservation-footer {
+            background-color:#333
+        }
+    </style>
+</head>
+<body>
+
+<footer th:fragment="footer" >
+        <div class="tm-us">
+            <p class="bold">About Us</p>
+            <p>About Us
+                The hotel chain was established in 1982, with a vision to create world-class hotels that offered exceptional
+                service and luxurious accommodations. After decades of success, the chain has expanded to various parts of
+                the world, including China. The latest addition to the chain is the hotel being built in the beautiful Wuxing
+                District of Huzhou, Zhejiang, China. The founder, Ms. Wang, had a passion for creating a hotel that
+                incorporates traditional Chinese elements with modern amenities.</p>
+        </div>
+        <div class="tm-address">
+            <p class="bold">Address</p>
+            <p>Reykjavikplein 1, 3543 KA Utrecht
+                Phone : 030 203 0500
+                Email : capgemini@info.com</p>
+        </div>
+        <br>
+        <div class="tm-media">
+            <a href="https://www.instagram.com/accounts/login/"><img src="/images/igfoto.png" width="10%" height="10%"></a>
+            <a href="https://support.google.com/answer/2451065?hl=en"><img src="/images/G.png" width="100%" height="100%"></a>
+            <a href="https://web.wechat.com/uklccp?lang=en_US&t=v2/index"><img src="/images/wechat1.jpg" width="12%" height="12%"></a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="DCTERMS.language" id="language-meta" content="zh-chinese" title="XSD.language">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="shortcut icon" href="/sites/default/files/ro-favicon-wit_0.png" type="image/x-icon">
+    <!-- <link href="https://allfont.net/allfont.css?fonts=bazooka-regular" rel="stylesheet" type="text/css" />-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="/js/register.js"></script>
+    <style>
+*{
+margin: 0;
+padding: 0;
+font-family: 'Bazooka Regular', arial;
+
+}
+body {
+background-color: #333333;
+font-family: 'Bazooka Regular', arial;
+margin: 0;
+padding: 0;
+}
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+.tm-header {
+display: flex;
+align-items: center;
+background-color: #333333;
+padding: 20px;
+justify-content: space-between;
+align-items: center;
+text-align: center;
+}
+
+.tm-logo {
+text-align: center;
+}
+
+.tm-logo img {
+width: 15%;
+height: 15%;
+margin-right: 10px;
+}
+
+.tm-header {
+background-color: #333333;
+padding: 20px;
+justify-content: space-between;
+align-items: center;
+display: inline;
+text-align: center;
+}
+
+.tm-logo {
+display: flex;
+justify-content: center;
+width: 100px;
+height: 100px;
+align-content: center;
+margin: 0 auto;
+width: 10%;
+height: 10%
+}
+
+h2 {
+text-align: center;
+font-family: 'Bazooka Regular', arial;
+font-size: 32px;
+color:#f2f8fb;
+}
+
+
+.tm-heading {
+font-size: 36px;
+font-weight: bold;
+color: rgb(224, 232, 237);
+margin: 0;
+text-align: center;
+}
+
+
+.tm-nav ul {
+display:inline;
+margin: 0;
+padding: 0;
+color: #e46815eb;
+text-align: center;
+}
+
+.tm-nav li {
+display: inline;
+margin-right: 20px;
+text-align: center;
+}
+
+.tm-nav a {
+color: #005592;
+font-size: 18px;
+text-align: center;
+}
+
+.tm-nav a:hover {
+color: #2f9ace;
+
+}
+.tm-slidertext{
+position: absolute;
+top: 30%;
+left: 50%;
+color: #67b5d9;
+}
+.tm-nav div ul li a{
+font-size: 1.8vmax;
+padding: 5px 10px;
+color:#e8f1f5;
+line-height: 50px;
+
+}
+.tm-nav div ul li a:hover{
+color: #2f9ace;
+}
+
+
+
+.content-part {
+text-align: left;
+color: black;
+}
+
+.tm-footer {
+background-color: #333333;
+padding: 20px;
+text-align: center;
+}
+
+.tm-address {
+margin-bottom: 10px;
+}
+
+.tm-address p {
+color: #67b5d9;
+}
+
+.tm-media {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+</style>
+
+    <script>
+<!-- Add any scripts or JavaScript code you need here-->
+$(document).ready(function() {
+console.log("Initializing");
+init();
+});
+</script>
+</head>
+<body>
+
+<header class="tm-header">
+    <img class="tm-logo" src="images/hotellogo.png" alt="Meldova Hotel" width="15%" height="15%" >
+    <h4 class="tm-heading">MOLVENO Lake Resort Hotel</h4>
+
+    <button class="btn btn-outline-primary" style = "position:fixed; right:100px; top:50px; " ><a href="login" >Log in</a></button>
+
+
+
+
+</header>
+<div class="container" id="guestModal">
+    <h3 style="color: #f2f8fb;">Registration</h3>
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="name" style="color: #f6f0f2;">First Name</label><br>
+            <input type="text" id="name" name="firstName" style="width: 330px;" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName" style="color: #f6f0f2;">Last Name</label><br>
+            <input type="text" id="lastName" name="lastName" style="width: 330px;" required>
+        </div>
+        <div class="form-group">
+            <label for="phone_num" style="color: #f6f0f2;">Telephone Number</label><br>
+            <input type="text" id="phone_num" name="telephone" style="width: 330px;" required>
+        </div>
+        <div class="form-group">
+            <label for="email" style="color: #f6f0f2;">Email</label><br>
+            <input type="email" id="email" name="email" style="width: 330px;" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password" style="color: #f6f0f2;">Password</label><br>
+            <input type="password" id="password" name="password" autocomplete="new-password" style="width: 330px;" required>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword" style="color: #f6f0f2;">Confirm Password</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" style="width: 330px;" required>
+        </div>
+        <button class="btn btn-outline-primary " type="submit" id="create-registration"> Register</button>
+    </form>
+    <!-- <img class="foto-right" src="images/image11111.jpg" alt="Right Image" width="400px" height="800px">-->
+</div>
+</div>
+<footer class="tm-footer">
+    <div class="tm-address">
+        <p class="bold" style="color: #67b5d9;">Address</p>
+        <address style="color: #67b5d9;">
+            Reykjavikplein 1, 3543 KA Utrecht
+            Phone: 030 203 0500
+            Email: capgemini@info.com</address>
+    </div>
+
+    <div class="tm-media">
+        <a href="https://www.instagram.com/accounts/login/"><img src="/images/igfoto.png" width="10%" height="10%"></a>
+        <a href="https://support.google.com/answer/2451065?hl=en"><img src="/images/G.png" width="100%" height="100%"></a>
+        <a href="https://web.wechat.com/uklccp?lang=en_US&t=v2/index"><img src="/images/wechat1.jpg" width="12%" height="12%"></a>
+    </div>
+</footer>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

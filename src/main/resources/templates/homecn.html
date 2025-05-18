@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Meldova Hotel Booking System</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.tm-header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+ .tm-header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 2;
+            color: #fff;
+        }
+
+
+.tm-logo {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  max-width: 200px;
+  z-index: 2;
+}
+
+
+.tm-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+}
+
+.tm-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tm-slider-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tm-slider-item.active {
+  opacity: 1;
+}
+
+.flags {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.tm-nav {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  z-index: 2;
+}
+
+.tm-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.tm-nav li {
+  margin-right: 20px;
+}
+
+.tm-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .tm-heading {
+    font-size: 24px;
+  }
+}
+
+    </style>
+
+</head>
+</select>
+
+<body>
+<header class="tm-header">
+    <div class="tm-slider">
+        <div class="tm-slider-item active">
+            <img src="/images/photo6.jpg" alt="Slider Image 1">
+        </div>
+        <div class="tm-slider-item">
+            <img src="/images/photo8.jpg" alt="Slider Image 2">
+        </div>
+        <div class="tm-slider-item">
+            <img src="/images/photo5.jpg" alt="Slider Image 3">
+        </div>
+    </div>
+    <div class="tm-header-content">
+
+        <img class="tm-logo" src="/images/hotellogo.png" alt="Meldova Hotel">
+
+        <h1 class="tm-heading">Molveno Lake Resort Hotel</h1>
+        <br>
+        <a href="reservation" style="display: inline-block; background-color: #2b8ead; color: #fff; text-decoration: none; padding: 12px 24px; font-size: 18px; font-weight: bold; border-radius: 4px; border: none; transition: background-color 0.3s;">
+            现在预订
+        </a>
+
+    </div>
+    <div class="flags">
+        <div class="flagEn">
+            <a href="#" id="enImg"><img src="/images/us.png"/></a>
+        </div>
+        <div class="flagCn">
+            <a href="#" id="cnImg"><img src="/images/cn.png"/></a>
+        </div>
+    </div>
+    <nav class="tm-nav">
+        <ul>
+            <li class="tm-list"><a href="home" th:href="@{/home}">指数</a></li>
+            <li class="tm-list"><a href="rooms" th:href="@{/rooms}">房间</a></li>
+            <li class="tm-list"><a href="booking" th:href="@{/reservation}">预订</a></li>
+            <li class="tm-list"><a href="Login" th:href="@{/login}">登录</a></li>
+            <li class="tm-list"><a href="restaurant" th:href="@{/restaurant}">餐厅</a></li>
+            <li class="tm-list"><a href="contact" th:href="@{/contact}">接触</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<section class="tm-expsection">
+    <div class="tm-exp1">
+        <p>在我们优雅而现代的客房放松身心，在我们的餐厅尽情享用美味佳肴，并在我们的水疗中心尽情享受。 Molveno Hotel 非常高兴地欢迎客人，并很高兴为您提供一个充满难忘回忆的假期.</p>
+        <img src="/images/dobel bed.jpg" alt="Our Hotel">
+    </div>
+</section>
+<section class="tm-expsection">
+    <div class="tm-exp2">
+        <p>土地</p>
+        <img src="/images/terras.jpg" alt="Terras">
+    </div>
+
+</section>
+
+<section class="tm-expsection">
+    <div class="tm-exp1">
+        <p>游泳池</p>
+        <img src="/images/outdoor-pool.jpg" alt="Swimming Pool">
+    </div>
+</section>
+
+
+<section class="tm-expsection">
+    <div class="tm-exp2">
+        <p>桑拿</p>
+        <img src="/images/sauna.webp" alt="Sauna">
+    </div>
+</section>
+
+
+<section class="tm-servicesection">
+    <div class="tm-service">
+        <a href="roomservices">
+            <img class="tm-serimage" src="/images/bell.png" alt="Room Service">
+            <div>
+                <p class="b" style="color: black;">桑拿</p>
+                <p style="color: black;">享受优质及时的客房服务，享受您的住宿</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+
+<section class="tm-makeres">
+    <div class="tm-res">
+        <div class="tm-resbutton">
+            <a href="booking"><p>进行预订</p></a>
+        </div>
+    </div>
+</section>
+
+<footer class="tm-footer">
+    <div class="tm-us">
+        <p class="bold">关于我们</p>
+        <p>该连锁酒店成立于 1982 年，其愿景是打造提供卓越服务的世界级酒店
+            服务和豪华住宿。经过几十年的成功，连锁店已扩展到全国各地
+            世界，包括中国。该连锁店的最新成员是在美丽的吴兴兴建的酒店
+            中国浙江省湖州市。创始人王女士热衷于打造一家酒店
+            将中国传统元素与现代设施融为一体。
+
+        </p>
+    </div>
+
+    <div class="tm-address">
+        <p class="bold">地址</p>
+        <p>Reykjavikplein 1, 3543 KA Utrecht<br>
+            电话: 030 203 0500<br>
+            电子邮件: capgemini@info.com</p>
+    </div>
+
+    <br/>
+
+
+    <div class="tm-media">
+        <a href="https://www.instagram.com/accounts/login/"><img src="/images/igfoto.png" width="10%" height="10%"></a>
+        <a href="https://support.google.com/answer/2451065?hl=en"><img src="/images/G.png" width="100%" height="100%"></a>
+        <a href="https://web.wechat.com/uklccp?lang=en_US&t=v2/index"><img src="/images/wechat1.jpg" width="12%" height="12%"></a>
+    </div>
+</footer>
+<script>
+  document.getElementById("enImg").addEventListener("click", function() {
+    window.location.href = "home";
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+101,First floor,Single,1,0,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+102,First floor,Single,1,0,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+103,First floor,Single,1,0,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+104,First floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+105,First floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+106,First floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+107,First floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+108,First floor,Single ,1,0,Single ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+109,First floor,Single ,1,0,Single ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+110,First floor,Double ,2,0,Double bed ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+111,First floor,Double ,2,0,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+112,First floor,Double ,2,0,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+113,First floor,Double ,2,0,2 single bed,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+114,First floor,Double ,2,0,2 single bed,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+115,First floor,Double ,2,1,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+116,First floor,Double ,2,1,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+117,First floor,Double ,2,2,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+118,First floor,Double ,2,2,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+119,First floor,2 x Double ,4,2,"2 Double bed, 1 single bed, 1 baby bed",Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",550,TRUE
+201,Second floor,Single,1,0,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+202,Second floor,Single,1,0,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+203,Second floor,Single,1,0,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+204,Second floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+205,Second floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+206,Second floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+207,Second floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+208,Second floor,Single ,1,0,Single ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+209,Second floor,Single ,1,0,Single ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+210,Second floor,Double ,2,0,Double bed ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+211,Second floor,Double ,2,0,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+212,Second floor,Double ,2,0,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+213,Second floor,Double ,2,0,2 single bed,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+214,Second floor,Double ,2,0,2 single bed,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+215,Second floor,Double ,2,1,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+216,Second floor,Double ,2,1,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+217,Second floor,Double ,2,2,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+218,Second floor,2 x Double ,4,2,"2 Double bed, 1 single bed, 1 baby bed",Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",550,TRUE
+219,Second floor,Double ,2,2,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+301,Third floor,Single,1,0,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+302,Third floor,Single,1,0,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+303,Third floor,Single,1,0,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+304,Third floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+305,Third floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+306,Third floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+307,Third floor,Single,1,1,Single ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+308,Third floor,Single ,1,0,Single ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+309,Third floor,Single ,1,0,Single ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+310,Third floor,Double ,2,0,Double bed ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+311,Third floor,Double ,2,0,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+312,Third floor,Double ,2,0,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+313,Third floor,Double ,2,0,2 single bed,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+314,Third floor,Double ,2,0,2 single bed,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+315,Third floor,2 x Double ,4,2,"2 Double bed, 1 single bed, 1 baby bed",Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",550,TRUE
+316,Third floor,Double ,2,1,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+317,Third floor,Double ,2,2,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+318,Third floor,Double ,2,2,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+319,Third floor,Double ,2,2,Double bed ,Non Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+401,Fourth floor,Single,1,0,Single ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+402,Fourth floor,Single,1,0,Single ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+403,Fourth floor,Single,1,0,Single ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+404,Fourth floor,Single,1,1,Single ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+405,Fourth floor,Single,1,1,Single ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+406,Fourth floor,Single,1,1,Single ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+407,Fourth floor,Single,1,1,Single ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+408,Fourth floor,Single ,1,0,Single ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+409,Fourth floor,Single ,1,0,Single ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+410,Fourth floor,Double ,2,0,Double bed ,Disabled room,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+411,Fourth floor,Double ,2,0,Double bed ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+412,Fourth floor,Double ,2,0,Double bed ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine",240,TRUE
+413,Fourth floor,Double ,2,0,2 single bed,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+414,Fourth floor,Double ,2,0,2 single bed,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler",220,TRUE
+415,Fourth floor,Double ,2,1,Double bed ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+416,Fourth floor,Double ,2,1,Double bed ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+417,Fourth floor,Double ,2,2,Double bed ,Smoking,"mini fridge, TV, Airco,WIFI, toilet, shower + bathtub, phone, water boiler, coffee machine",380,TRUE
+418,Fourth floor,Penthouse,8,2,"2 x Double bed, 4 single beds, 2 baby beds",Smoking,"Mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine, Sauna, Bathtub, swimming pool ",800,TRUE
+419,Fourth floor,Penthouse,8,2,"2 x Double bed, 4 single beds, 2 baby beds",Smoking,"Mini fridge, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine, Sauna, Bathtub, swimming pool ",800,TRUE
+501,Fifth floor,Penthouse,10,2,"3 x Double bed, 4 single beds, 2 baby beds",Smoking,"Kitchen, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine, Sauna, Bathtub, infinity swimming pool, terras, parasols, terras chairs en tables ",3000,TRUE
+502,Fifth floor,Penthouse,10,2,"3 x Double bed, 4 single beds, 2 baby beds",Smoking,"Kitchen, TV, Airco,WIFI, toilet, shower, phone, water boiler, coffee machine, Sauna, Bathtub, infinity swimming pool, terras, parasols, terras chairs en tables ",3000,TRUE

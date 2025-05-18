@@ -1,0 +1,436 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Majestic Hotel</title>-->
+<!--  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<!--  &lt;!&ndash;  <script type="text/javascript" src="dist/pickmeup.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;  <script type="text/javascript" src="dist/handleCounter.js"></script>&ndash;&gt;-->
+<!--  <link rel="stylesheet" type="text/css" href="css/pickmeup.css">-->
+<!--  <link rel="stylesheet" type="text/css" href="css/handle-counter.min.css">-->
+<!--  <link rel="stylesheet" type="text/css" href="css/main.css">-->
+<!--  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">-->
+<!--&lt;!&ndash;  <script type="text/javascript" src="dist/jquery.scrollUp.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;  <script type="text/javascript" src="dist/demo.js"></script>&ndash;&gt;-->
+
+<!--  <script src="/js/reservation.js"></script>-->
+
+<!--  <script>-->
+<!--        $( document ).ready(function() {-->
+<!--            console.log( "initializing" );-->
+<!--            init();-->
+<!--        });-->
+<!--   </script>-->
+
+<!--  <style>-->
+<!--   select {-->
+
+<!--        padding: 8px;-->
+<!--        font-size: 17px;-->
+
+<!--    }-->
+
+
+
+
+
+<!--        .tm-booking {-->
+<!--            display: flex;-->
+<!--            justify-content: space-between;-->
+<!--            align-items: center;-->
+<!--        }-->
+
+<!--        .tm-form1,-->
+<!--        .tm-form2 {-->
+<!--            flex-basis: 45%;-->
+<!--        }-->
+
+<!--        .vertical-line {-->
+<!--            width: 2px;-->
+<!--            height: 300px;-->
+<!--            background-color: white;-->
+<!--        }-->
+
+<!--        form {-->
+<!--            display: flex;-->
+<!--            flex-wrap: wrap;-->
+<!--            justify-content: space-between;-->
+<!--        }-->
+
+<!--        .tm-form1 input[type="text"],-->
+<!--        .tm-form1 select,-->
+<!--        .tm-form2 input[type="text"],-->
+<!--        .tm-form2 select {-->
+<!--            width: 100%;-->
+<!--            margin-bottom: 10px;-->
+<!--            padding: 5px;-->
+<!--        }-->
+
+<!--        .tm-form1 .tm-num1,-->
+<!--        .tm-form1 .tm-num2 {-->
+<!--            display: flex;-->
+<!--            align-items: center;-->
+<!--        }-->
+
+<!--        .tm-form1 .tm-num1 label,-->
+<!--        .tm-form1 .tm-num2 label {-->
+<!--            margin-right: 10px;-->
+<!--        }-->
+
+<!--        .tm-form1 .tm-num1 input[type="text"],-->
+<!--        .tm-form1 .tm-num2 input[type="text"] {-->
+<!--            width: 40px;-->
+<!--            text-align: center;-->
+<!--        }-->
+
+<!--        .tm-form1 .tm-num1 button,-->
+<!--        .tm-form1 .tm-num2 button {-->
+<!--            padding: 5px;-->
+<!--            width: 25px;-->
+<!--            text-align: center;-->
+<!--           ;-->
+<!--            color: white;-->
+<!--            border: none;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+
+<!--        .tm-form1 .tm-num1 button:hover,-->
+<!--        .tm-form1 .tm-num2 button:hover {-->
+<!--            background-color: #0D47A1;-->
+<!--        }-->
+
+<!--        .tm-form1 .tm-num1 button:active,-->
+<!--        .tm-form1 .tm-num2 button:active {-->
+<!--            background-color: #0D47A1;-->
+<!--            transform: translateY(1px);-->
+<!--        }-->
+
+<!--        .tm-form2 .tm-cl {-->
+<!--            display: flex;-->
+<!--            flex-direction: column;-->
+<!--        }-->
+
+<!--        .tm-form2 .tm-cl label {-->
+<!--            margin-bottom: 10px;-->
+<!--        }-->
+
+<!--        .tm-form2 .tm-cl input[type="text"] {-->
+<!--            width: 100%;-->
+<!--            padding: 5px;-->
+<!--            margin-bottom: 10px;-->
+<!--        }-->
+
+<!--        .tm-form2 .tm-cl input[type="submit"] {-->
+<!--            padding: 10px;-->
+<!--            width: 100px;-->
+<!--            background-color: #4CAF50;-->
+<!--            color: white;-->
+<!--            border: none;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+
+<!--        .tm-form2 .tm-cl input[type="submit"]:hover {-->
+<!--            background-color: #45a049;-->
+<!--        }-->
+
+<!--        .tm-form2 .tm-cl input[type="submit"]:active {-->
+<!--            background-color: #45a049;-->
+<!--            transform: translateY(1px);-->
+<!--        }-->
+<!--        .tm-header {-->
+<!--            background-image: url("/images/restaurantpage.jpg");-->
+<!--            padding: 20px;-->
+<!--            display: flex;-->
+<!--            justify-content: space-between;-->
+<!--            align-items: center;-->
+<!--        }-->
+
+<!--    </style>-->
+
+
+<!--</head>-->
+<!--<body>-->
+
+<!--<header class="tm-header">-->
+<!--  </div>-->
+<!--  <div class="flags">-->
+<!--    <div class="flagEn">-->
+<!--      <a href="#" id="enImg"><img src="/images/us.png"/></a>-->
+<!--    </div>-->
+<!--    <div class="flagCn">-->
+<!--      <a href="#" id="cnImg"><img src="/images/cn.png"/></a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  </nav>-->
+<!--  <img class="tm-logo" src="/images/hotellogo.png" alt="Majestic Hotel">-->
+<!--  <nav class="tm-nav">-->
+<!--    <div>-->
+<!--      <ul>-->
+<!--        <li class="tm-list"><a href="home" th:href="@{/home}">Home</a></li>-->
+<!--        <li class="tm-list"><a href="rooms" th:href="@{/rooms}">Rooms</a></li>-->
+<!--        <li class="tm-list"><a href="booking" th:href="@{/reservation}">Booking</a></li>-->
+<!--        <li class="tm-list"><a href="Login" th:href="@{/login}">Login</a></li>-->
+<!--        <li class="tm-list"><a href="restaurant" th:href="@{/restaurant}">Restaurant</a></li>-->
+<!--        <li class="tm-list"><a href="contact" th:href="@{/contact}">Contact</a></li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </nav>-->
+<!--</header>-->
+
+
+<!--&lt;!&ndash;<section class="tm-main">&ndash;&gt;-->
+
+<!--&lt;!&ndash;</section>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<section class="tm-booking">&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;<h3>Select your room</h3>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <form id="room-form" name="reservation-form">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label for="adults">Adults:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="number" class="form-control" id="adults" name=>"adults" min="1" max="6"&ndash;&gt;-->
+<!--&lt;!&ndash;        <style>&ndash;&gt;-->
+<!--&lt;!&ndash;  label[for="guest"] {&ndash;&gt;-->
+<!--&lt;!&ndash;    color: black;&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;</style>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label for="children">Children:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="number" class="form-control" id="children" name=>"children" min="0" max="4"&ndash;&gt;-->
+<!--&lt;!&ndash;        <style>&ndash;&gt;-->
+<!--&lt;!&ndash;  label[for="Children"] {&ndash;&gt;-->
+<!--&lt;!&ndash;    color: black;&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;</style>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label for="roomType">Type of room:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="text" class="form-control" id="roomType" name="roomType">&ndash;&gt;-->
+<!--&lt;!&ndash;        <style>&ndash;&gt;-->
+<!--&lt;!&ndash;  label[for="room"] {&ndash;&gt;-->
+<!--&lt;!&ndash;    color:black;&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;</style>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;      <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;      <label for="check-in-date">Check-in Date:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      <input type="text" class="form-control" id="check-in-date" name="check-in-date">&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;      <label for="check-out-date">Check-out Date:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      <input type="text" class="form-control" id="check-out-date" name="check-out-date">&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <br>&ndash;&gt;-->
+<!--&lt;!&ndash;      <button type="button" class="btn btn-primary" id="check-availability">Check availability</button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </form>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <p>&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;    <table id="room-table" class="display mx-auto">&ndash;&gt;-->
+<!--&lt;!&ndash;      <label for="check-out-date">Check-out Date:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;    </table>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </section>&ndash;&gt;-->
+<!--<div class="container">-->
+<!--  <form id="room-form" name="room-form">-->
+<!--    <div class="form-group">-->
+<!--      <label for="startDate">Check in date:</label>-->
+<!--      <input type="text" class="form-control" id="startDate" name="startDate" required="required" value="2023-06-14">-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="endDate">Check out date:</label>-->
+<!--      <input type="text" class="form-control" id="endDate" name="endDate" required="required" value="2023-06-14">-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="adults">Adults:</label>-->
+<!--      <input type="number" class="form-control" id="adults" name="adults" min="1" max="8">-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="children">Children:</label>-->
+<!--      <input type="number" class="form-control" id="children" name="children" min="1" max="8">-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="roomType">Room Type:</label>-->
+<!--      <input type="text" class="form-control" id="roomType" name="roomType">-->
+<!--    </div>-->
+<!--    <button type="button" class="btn btn-primary" id="check-availability">Check availability</button>-->
+
+<!--  </form>-->
+<!--</div>-->
+<!--<p/>-->
+
+<!--<p/>-->
+<!--<div class="container">-->
+<!--  <table id="room-table" class="display mx-auto">-->
+<!--    <label for="roomType">Room Type:</label>-->
+<!--  </table>-->
+<!--</div>-->
+<!--<p/>-->
+
+<!--&lt;!&ndash;<script src="https://cdnjs.cloudflare.com/ajax/libs/pickmeup/1.11.0/pickmeup.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pickmeup/1.11.0/themes/default.min.css">&ndash;&gt;-->
+
+<!--<footer class="tm-footer">-->
+<!--  <div class="tm-us">-->
+<!--    <p class="bold">About Us</p>-->
+<!--    <p>About Us-->
+<!--      The hotel chain was established in 1982, with a vision to create world-class hotels that offered exceptional-->
+<!--      service and luxurious accommodations. After decades of success, the chain has expanded to various parts of-->
+<!--      the world, including China. The latest addition to the chain is the hotel being built in the beautiful Wuxing-->
+<!--      District of Huzhou, Zhejiang, China. The founder, Ms. Wang, had a passion for creating a hotel that-->
+<!--      incorporates traditional Chinese elements with modern amenities.</p>-->
+<!--  </div>-->
+<!--  <div class="tm-address">-->
+<!--    <p class="bold">Address</p>-->
+<!--    <p>Reykjavikplein 1, 3543 KA Utrecht-->
+<!--      Phone : 030 203 0500-->
+<!--      Email : capgemini@info.com</p>-->
+<!--  </div>-->
+<!--  <br>-->
+<!--  <div class="tm-media">-->
+<!--    <a href="#"><img src="/images/igfoto.png"></a>-->
+<!--    <a href="#"><img src="/images/G.png"></a>-->
+<!--&lt;!&ndash;    <a href="#"><img src="/images/wechat.png"></a>&ndash;&gt;-->
+<!--  </div>-->
+<!--</footer>-->
+
+<!--<script>-->
+<!--  document.getElementById("cnImg").addEventListener("click", function() {-->
+<!--    window.location.href = "bookingcn";-->
+<!--  });-->
+<!--</script>-->
+
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">-->
+<!--<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>-->
+<!--<script>-->
+<!--  $(function() {-->
+
+<!--    var checkInDateInput = $("#check-in-date");-->
+<!--    var checkOutDateInput = $("#check-out-date");-->
+
+<!--    var currentDate = new Date();-->
+<!--    var currentDateString = currentDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });-->
+
+<!--    var maxDate = new Date();-->
+<!--    maxDate.setMonth(currentDate.getMonth() + 6);-->
+<!--    var maxDateString = maxDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });-->
+
+
+<!--    checkInDateInput.datepicker({-->
+<!--      minDate: 0,-->
+<!--      maxDate: maxDateString,-->
+<!--      dateFormat: 'yy-mm-dd',-->
+<!--      onSelect: function(selectedDate) {-->
+<!--        var minDate = new Date(selectedDate);-->
+<!--        minDate.setDate(minDate.getDate() + 1);-->
+<!--        checkOutDateInput.datepicker("option", "minDate", minDate);-->
+<!--      }-->
+<!--    });-->
+
+
+<!--    checkOutDateInput.datepicker({-->
+<!--      minDate: "+1D",-->
+<!--      dateFormat: 'yy-mm-dd',-->
+<!--      onSelect: function(selectedDate) {-->
+
+<!--        var checkInDate = checkInDateInput.datepicker("getDate");-->
+<!--        var checkOutDate = checkOutDateInput.datepicker("getDate");-->
+<!--        var duration = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));-->
+<!--        $("#duration").text(duration + " nights");-->
+<!--      }-->
+<!--    });-->
+
+<!--    checkInDateInput.datepicker("option", "minDate", 0);-->
+<!--  });-->
+<!--</script>-->
+
+
+<!--<script>-->
+<!--  document.getElementById("cnImg").addEventListener("click", function() {-->
+<!--    window.location.href = "reservationcn";-->
+<!--  });-->
+<!--</script>-->
+
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+  <meta th:include="~{fragments/head :: metas}" th:remove="tag"/>
+  <title>Room page</title>
+  <style th:include="~{fragments/head :: styles}" th:remove="tag"/>
+  <script th:include="~{fragments/head :: scripts}" th:remove="tag"/>
+  <script src="/js/reservation.js"></script>
+
+  <script>
+        $( document ).ready(function() {
+            console.log( "initializing" );
+            init();
+        });
+    </script>
+
+</head>
+<body>
+<div th:insert="~{fragments/menu :: menu}">
+</div>
+<div th:insert="~{fragments/header :: header}">
+</div>
+
+<div class="container">
+  <form id="room-form" name="room-form">
+    <div class="form-group">
+      <label for="startDate">Check in date:</label>
+      <input type="text" class="form-control" id="startDate" name="startDate" required="required" value="2023-06-14">
+    </div>
+    <div class="form-group">
+      <label for="endDate">Check out date:</label>
+      <input type="text" class="form-control" id="endDate" name="endDate" required="required" value="2023-06-14">
+    </div>
+    <div class="form-group">
+      <label for="adults">Adults:</label>
+      <input type="number" class="form-control" id="adults" name="adults" min="1" max="8">
+    </div>
+    <div class="form-group">
+      <label for="children">Children:</label>
+      <input type="number" class="form-control" id="children" name="children" min="1" max="8">
+    </div>
+    <div class="form-group">
+      <label for="roomType">Room Type:</label>
+      <input type="text" class="form-control" id="roomType" name="roomType">
+    </div>
+    <button type="button" class="btn btn-primary" id="check-availability">Check availability</button>
+
+  </form>
+</div>
+<p/>
+
+<p/>
+<div class="container">
+  <table id="room-table" class="display mx-auto">
+  </table>
+</div>
+<p/>
+
+
+<div th:insert="~{fragments/footer :: footer}">
+
+
+</div>
+
+</body>
+</html>

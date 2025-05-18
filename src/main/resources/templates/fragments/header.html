@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+
+    <header th:fragment="header">
+
+        </div>
+        <div class="flags">
+            <div class="flagEn">
+                <a href="#" id="enImg"><img src="/images/us.png"/></a>
+            </div>
+            <div class="flagCn">
+                <a href="#" id="cnImg"><img src="/images/cn.png"/></a>
+            </div>
+        </div>
+        </nav>
+        <img class="tm-logo" src="/images/hotellogo.png" alt="Majestic Hotel">
+        <nav class="tm-nav">
+            <div>
+                <ul>
+                    <li class="tm-list"><a href="home" th:href="@{/home}">Home</a></li>
+                    <li class="tm-list"><a href="rooms" th:href="@{/rooms}">Rooms</a></li>
+                    <li class="tm-list"><a href="booking" th:href="@{/reservation}">Booking</a></li>
+                    <li class="tm-list"><a href="Login" th:href="@{/login}">Login</a></li>
+                    <li class="tm-list"><a href="restaurant" th:href="@{/restaurant}">Restaurant</a></li>
+                    <li class="tm-list"><a href="contact" th:href="@{/contact}">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+</body>
+</html>
